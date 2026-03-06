@@ -7,16 +7,16 @@ public class PalindromeCheckerApp {
         System.out.print("Enter a string: ");
         String input = sc.nextLine();
 
-        // Convert string to character array
-        char[] characters = input.toCharArray();
+        // Convert string to char array
+        char[] arr = input.toCharArray();
 
         int start = 0;
-        int end = characters.length - 1;
+        int end = arr.length - 1;
         boolean isPalindrome = true;
 
-        // Two-pointer comparison
+        // Two pointer comparison
         while (start < end) {
-            if (characters[start] != characters[end]) {
+            if (arr[start] != arr[end]) {
                 isPalindrome = false;
                 break;
             }
@@ -24,11 +24,10 @@ public class PalindromeCheckerApp {
             end--;
         }
 
-        // Display result
         if (isPalindrome) {
-            System.out.println("The given string is a Palindrome");
+            System.out.println(input + " is a Palindrome");
         } else {
-            System.out.println("The given string is NOT a Palindrome");
+            System.out.println(input + " is NOT a Palindrome");
         }
 
         sc.close();
